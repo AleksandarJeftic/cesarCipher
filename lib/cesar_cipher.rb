@@ -3,13 +3,20 @@ class CesarCipher
     def self.rotate (str,num)  
       str=str.split("")
       str=str.map do |char|
-      	char=(char.ord+num)
-        unless (char>97 && char<122) || (char>65 && char<90)
-          char-=25
-          char.chr
+        #check for empty space or sign
+        if ("a".ord.."z".ord).include?(char.ord) || ("A".ord.."Z".ord).include?(char.ord)
+      	  char=(char.ord+num)
+          #check if within ranges of up and low case letters
+          unless ("a".ord.."z".ord).include?(char) || ("A".ord.."Z".ord).include?(char)
+            char-=25
+            char.chr
+          else
+            char.chr
+          end
         else
-          char.chr
+          char
         end
-    return str.join
+      end
+    str.join
     end  
 end
