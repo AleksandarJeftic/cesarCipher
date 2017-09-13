@@ -1,8 +1,8 @@
 #include file with class
 require_relative "cesar_cipher"
 i=0
-#check input
-
+#check input 
+#if not matching desired format and range prompt input again with error msg
 while true
 
 puts
@@ -30,8 +30,6 @@ inputFirstPart= inputArray[0]
 inputKey=inputFirstPart[3..4].to_i
 
 inputText= inputArray[1]
-
-
 
 #output result 
 print "Your result is: "
