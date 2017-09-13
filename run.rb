@@ -1,5 +1,5 @@
 #include file with class
-require_relative "cesar_cipher"
+require_relative "../cesar_cipher"
 i=0
 #check input 
 #if not matching desired format and range prompt input again with error msg
