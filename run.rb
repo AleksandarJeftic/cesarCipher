@@ -6,19 +6,18 @@ i=0
 while true
 
 puts
-	if i>0
-		puts "Wrong Entry Please Try Again!"
+  if i>0
+    puts "Wrong Entry Please Try Again!"
+    puts "Input Decipher key in ROT0-ROT26 format and text to decipher using white space between. Example (ROT2 SomeText)"
+    input=gets.chop
 
-		puts "Input Decipher key in ROT0-ROT26 format and text to decipher using white space between. Example (ROT2 SomeText)"
-		input=gets.chop
+  else
+    puts "Input Decipher key in ROT0-ROT26 format and text to decipher using white space between. Example (ROT2 SomeText)"
+    input=gets.chop
+    i+=1
+  end
 
-	else
-		puts "Input Decipher key in ROT0-ROT26 format and text to decipher using white space between. Example (ROT2 SomeText)"
-		input=gets.chop
-		i+=1
-	end
-
- break if input.match(/\AROT([0-9]|1[0-9]|2[0-6]) /) 
+break if input.match(/\AROT([0-9]|1[0-9]|2[0-6]) /) 
 
 end
 
